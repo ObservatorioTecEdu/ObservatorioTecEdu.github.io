@@ -43,13 +43,22 @@
 		<!--<a-plane rotation="0 0 0" width="30" height="30"></a-plane>-->
 
       <a-assets>
-    	<img id="piso-texture" src="/assets/piso.png">    
-    	<img id="almohadas-texture" src="/assets/almohadas.png">    
+    	<img id="piso-texture" src="assets/piso.png">    
+    	<img id="almohadas-texture" src="assets/almohadas.png">    
+    	<img id="cama-texture" src="assets/cama.png">  
+    	<img id="techo-texture" src="assets/techo.png">  
+  	    <img id="colchon-texture" src="assets/colchon.png">
+  	    <img id="pared-texture" src="assets/pared.png">
+
   	  </a-assets>
 
-  	  <a-entity collada-model="url(assets/piso.dae);" material= "src: #piso-texture" shadow="" id="piso" position="5.559 1.798 0.115" scale="0.1 0.1 0.1" rotation="
-  	  -90 0 0"></a-entity>
-  	  <a-entity collada-model="url(assets/almohadas.dae);" material= "src: #almohadas-texture" shadow="" id="almohadas" scale="0.001 0.001 0.001" position="1.073 0.305 -6.098"></a-entity>
+  	  <a-entity collada-model="url(assets/piso.dae);" material= "src: #piso-texture" shadow="" id="piso" position="5.884 2.964 1.622" scale="0.1 0.1 0.1" rotation="
+  	  -90 0 0"></a-entity> 	
+      <a-entity collada-model="url(assets/techo.dae);" material= "src: #techo-texture" shadow="" id="techo" scale="0.001 0.001 0.001" position="0.014 0 -0.046"></a-entity> 
+      <a-entity collada-model="url(assets/pared.dae);" material= "src: #pared-texture" shadow="" id="pared" scale="0.001 0.001 0.001"></a-entity> 
+   	  <a-entity collada-model="url(assets/almohadas.dae);" material= "src: #almohadas-texture" shadow="" id="almohadas" scale="0.001 0.001 0.001" position="1.073 0.305 -6.098"></a-entity>
+  	  <a-entity collada-model="url(assets/cama.dae);" material= "src: #cama-texture" shadow="" id="cama" scale="0.001 0.001 0.001" position="0 0 -5.248"></a-entity>
+      <a-entity collada-model="url(assets/colchon.dae);" material= "src: #colchon-texture" shadow="" id="colchon" scale="0.001 0.001 0.001" position="-0.014 0.052 -5.18"></a-entity>
  		
 
 
@@ -62,7 +71,7 @@
                  position="0 0 0"></a-sound>
 
 
-      <a-entity light="distance:5;intensity:0.9;angle:180;type:point;castShadow:true" position="3.674 1.981 -1.772" data-aframe-default-light="" aframe-injected="" rotation="-77.92226013779197 -153.38080175652138 152.9224355204167" scale="1 0.78 1" id="luzbombillo"></a-entity>
+      <a-entity light="distance:5;intensity:0.9;angle:180;type:point;castShadow:true" position="3.674 2.529 -1.84" data-aframe-default-light="" aframe-injected="" rotation="-77.92226013779197 -153.38080175652138 152.9224355204167" scale="1 0.78 1" id="luzbombillo"></a-entity>
 
     <a-entity light="intensity:0.2;distance:3;color:#ffffb9;angle:25;type:spot;castShadow:true" position="2.354 -0.169 -4.057" data-aframe-default-light="" aframe-injected="" rotation="65.89014644004466 14.896902673401405 153.38080175652138" id="luzlampara1"></a-entity>
 
