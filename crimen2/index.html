@@ -31,7 +31,7 @@
    <body>
 	
 		
-	<a-scene>
+	<a-scene vr-mode-ui="enabled: false">
 
  		<a-entity mobile></a-entity>
 
@@ -49,6 +49,8 @@
     	<img id="techo-texture" src="assets/techo.png">  
   	    <img id="colchon-texture" src="assets/colchon.png">
   	    <img id="pared-texture" src="assets/pared.png">
+  	    <img id="ventana-texture" src="assets/ventana.png">
+  	    <img id="mesasnoche-texture" src="assets/mesasnoche.png">
 
 	      
   	  </a-assets>
@@ -57,10 +59,11 @@
   	  -90 0 0"></a-entity> 	
       	<a-entity collada-model="url(assets/techo.dae);" material= "src: #techo-texture" shadow="" id="techo" scale="0.001 0.001 0.001" position="0.014 0 -0.046"></a-entity> 
       	<a-entity collada-model="url(assets/pared.dae);" material= "src: #pared-texture" shadow="" id="pared" scale="0.001 0.001 0.001"></a-entity> 
- 	<a-entity collada-model="url(assets/almohadas.dae);" material= "src: #almohadas-texture" shadow="" id="almohadas" scale="0.001 0.001 0.001" position="-0.323 0.059 0.155"></a-entity>
+ 	<a-entity collada-model="url(assets/almohadas.dae);" material= "src: #almohadas-texture" shadow="" id="almohadas" scale="0.001 0.001 0.001" position="-0.106 -0.373 -4.865"></a-entity>
   	<a-entity collada-model="url(assets/cama.dae);" material= "src: #cama-texture" shadow="" id="cama" scale="0.001 0.001 0.001" position="0 0 -5.248"></a-entity>
       	<a-entity collada-model="url(assets/colchon.dae);" material= "src: #colchon-texture" shadow="" id="colchon" scale="0.001 0.001 0.001" position="-0.014 0.052 -5.18"></a-entity>
- 		
+      	<a-entity collada-model="url(assets/ventana.dae);" material= "src: #ventana-texture" shadow="" id="ventana" scale="0.001 0.001 0.001" position="-0.014 -0.009 -4.251"></a-entity>
+      	<a-entity collada-model="url(assets/mesasnoche.dae);" material= "src: #mesasnoche-texture" shadow="" id="mesasnoche" scale="0.001 0.001 0.001" position="-0.014 -0.009 -5.24"></a-entity>
 
 
 
@@ -88,6 +91,10 @@
 
         <a-entity position="3.5 0 0" camera="userHeight:1.5" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
 
+
+
+		<a-entity light="color:#BBB;type:ambient" data-aframe-default-light="" aframe-injected="" visible=false></a-entity>
+		<a-entity light="intensity:0.6;castShadow:true" position="-0.5 1 1" data-aframe-default-light="" aframe-injected="" visible=false></a-entity>
 
 	</a-scene>
 
