@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	    <meta charset="utf-8">
+      
+      	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+
+       	<!--<script src="js/aframe.0.5.0.min.js"></script>-->
+	    <script src="js/aframe-extras.min.js"></script>
+
+	    <script src="js/lzma.js"></script>
+	    <script src="js/ctm.js"></script>
+	    <script src="js/CTMLoader.js"></script>
+
+	    <!--<script src="js/aframe-teleport-controls.min.js"></script>-->
+	<!--     <script src="js/spheres_anim.js"></script>
+	    <script src="js/anim_1.js"></script>
+	    <script src="js/anim_2.js"></script>
+	    <script src="js/mocap.js"></script>
+	    <script src="js/envMapMaterial.js"></script>
+	    <script src="js/ctm_component.js"></script>-->
+	    <script src="js/mobile_component.js"></script>
+	    <!--<script src="https://rawgit.com/chenzlabs/gearvr-controls/master/dist/aframe-gearvr-controls-component.min.js"></script> 
+ 
+
+<a-entity auto-detect-controllers></a-entity>
+   	</head>
+
+   
+
+   <body>
+	
+		
+	<a-scene>
+
+ 		<a-entity mobile></a-entity>
+
+ 		
+     <!--  	<a-entity light="type: directional; color: #808080; intensity: 0.5" position="2 20 0" visible="false"></a-entity>
+      	<a-entity light="type: ambient; color: #808080" visible="false"></a-entity>
+ -->
+
+
+		<!--<a-plane rotation="0 0 0" width="30" height="30"></a-plane>-->
+
+        <a-entity collada-model="piso/piso.dae" id="piso"  shadow="" scale="0.1 0.1 0.1" rotation="-90 0 0" position="5.7 2.93 1.35"></a-entity>
+        <a-entity collada-model="pared/pared.dae" id="pared"  shadow="" scale="0.001 0.001 0.001"></a-entity>
+        <a-entity collada-model="almohadas/almohadas.dae" shadow="" id="almohadas" scale="0.001 0.001 0.001" position="0 -0.01 0"></a-entity>
+        <a-entity collada-model="cama/cama.dae"  id="cama" scale="0.001 0.001 0.001" shadow="" position="0.05 0 0"></a-entity>
+        <a-entity collada-model="cobija/cobija.dae"  id="cobija" scale="0.001 0.001 0.001" shadow="" rotation="-90 0 0" position="0 0.013 0"></a-entity>
+        <a-entity collada-model="colchon/colchon.dae" id="colchon" shadow="" scale="0.001 0.001 0.001" position="0 0 -5.238"></a-entity>
+        <a-entity collada-model="llavin/llavin.dae"  id="llavin"  shadow="" scale="0.001 0.001 0.001" ></a-entity>
+        <a-entity collada-model="madera/madera.dae"  id="madera"  shadow="" scale="0.001 0.001 0.001" position="-0.12 0.00 0.02"></a-entity>
+        <a-entity collada-model="mesasnoche/mesasnoche.dae"  id="mesasnoche" shadow="" scale="0.001 0.001 0.001" ></a-entity>
+        <a-entity collada-model="ventana/ventana.dae" id="ventana" scale="0.001 0.001 0.001" position="0 0 -4.245"></a-entity>
+        <a-entity collada-model="monigote/monigote.dae"  id="monigote" scale="0.001 0.001 0.001" shadow="" rotation="-90 0 0" ></a-entity>
+        <a-entity collada-model="sangre/sangre.dae" id="sangre" scale="1 1 1" position="-0.01 -0.001 0" rotation="-90 0 0"></a-entity>
+       <a-entity collada-model="sangre2/sangre2.dae" id="sangre2" scale="0.001 0.001 0.001" position="-0.05 0.36 0.144" rotation="-90 0 0"></a-entity>
+        <a-entity collada-model="cuchillo/cuchillo.dae" id="cuchillo" scale="0.001 0.001 0.001" position="-0.187 3.469446951953614e-18 0.048999999999999995"></a-entity>
+        <a-entity collada-model="cortinas/cortinas.dae" id="cortinas" shadow="" scale="0.001 0.001 0.001" position="0 0 -4.599"></a-entity>
+        <a-entity collada-model="lampara/lampara.dae" id="lampara" shadow="" scale="0.001 0.001 0.001" rotation="270 0 0"></a-entity>
+        <a-entity collada-model="techo/techo.dae"  id="techo" scale="0.001 0.001 0.001" ></a-entity>
+        <a-entity collada-model="reloj/reloj.dae"  id="reloj"  scale="0.001 0.001 0.001" position="0.008 0 -0.012" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="basebombillo/basebombillo.dae"  id="basebombillo" scale="0.001 0.001 0.001" rotation="-90 0 0"></a-entity>
+        <a-entity collada-model="bombillo/bombillo.dae"  id="bombillo" scale="0.001 0.001 0.001" rotation="-90 0 0"></a-entity>
+
+
+        <a-entity collada-model="cenicero/cenicero.dae" id="cenicero" scale="0.001 0.001 0.001" position="1.844 -0.021 -2.572" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="cigarro1/cigarro1.dae" id="cigarro1" scale="0.001 0.001 0.001" position="1.844 -0.021 -2.572" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="cigarro2/cigarro2.dae" id="cigarro2" scale="0.001 0.001 0.001" position="1.844 -0.021 -2.572" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="cigarro3/cigarro3.dae" id="cigarro3" scale="0.001 0.001 0.001" position="1.844 -0.021 -2.572" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="cocaina/cocaina.dae" id="cocaina" scale="0.001 0.001 0.001" position="1.787 -0.396 -3.234" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="pajilla/pajilla.dae" id="pajilla" scale="0.001 0.001 0.001" position="1.667 -0.389 -3.115" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="pistola/pistola.dae" id="pistola" scale="0.001 0.001 0.001" position="-0.489 -0.35 -2.572" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="cel/cel.dae" id="cel" scale="0.001 0.001 0.001" position="3.682 -0.528 -2.515" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="pantalla/pantalla.dae" id="pantalla" scale="0.001 0.001 0.001" position="3.682 -0.528 -2.515" shadow="" rotation="-90 45 -45"></a-entity>
+        <a-entity collada-model="condon/condon.dae" id="condon" scale="0.001 0.001 0.001" position="-0.135 0.019 -0.381" shadow="" rotation="-90 45 -45" material="opacity:0.01000000000000000;transparent:true"></a-entity>
+        <!-- <a-entity collada-model="mancha/mancha.dae" id="mancha" scale="0.001 0.001 0.001" position="-0.135 -0.025 -0.381" shadow="" rotation="-90 45 -45" material="opacity:0.00010"></a-entity>
+ -->
+ 		
+
+
+
+    <a-entity id="sky" geometry="primitive:sphere;radius:20" material="color:#a4a4ff;shader:flat;side:back;height:2048;width:2048" ></a-entity>
+
+    <a-sound src="audio/0750.ogg"
+                 autoplay="true"
+                 loop="true"
+                 position="0 0 0"></a-sound>
+
+
+      <a-entity light="distance:5;intensity:0.9;angle:180;type:point;castShadow:true" position="3.674 1.981 -1.772" data-aframe-default-light="" aframe-injected="" rotation="-77.92226013779197 -153.38080175652138 152.9224355204167" scale="1 0.78 1" id="luzbombillo"></a-entity>
+
+    <a-entity light="intensity:0.2;distance:3;color:#ffffb9;angle:25;type:spot;castShadow:true" position="2.354 -0.169 -4.057" data-aframe-default-light="" aframe-injected="" rotation="65.89014644004466 14.896902673401405 153.38080175652138" id="luzlampara1"></a-entity>
+
+    <a-entity light="intensity:0.2;distance:3;color:#ffffb9;angle:25;type:spot;castShadow:true" position="5.293 -0.169 -4.057" data-aframe-default-light="" aframe-injected="" rotation="65.89014644004466 14.896902673401405 153.38080175652138" id="luzlampara2"></a-entity> 
+
+
+
+
+	
+
+
+        <a-entity auto-detect-controllers></a-entity>
+
+        <a-entity position="3.5 0 0" camera="userHeight:1.5" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
+
+
+	</a-scene>
+
+   <!-- <a-scene>
+
+		<a-entity rotation="-90 0 0" scale="0.001 0.001 0.001" obj-model="mtl:piso/piso.mtl;obj:piso/piso.obj" id="piso"></a-entity>
+		<a-entity position="-6.453 -3.526 5.5" light="color:#ffffff;type:ambient" id="luzambiente"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="mtl:pared/pared.mtl;obj:pared/pared.obj" id="pared"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" id="cama" obj-model="mtl:cama/cama.mtl;obj:cama/cama.obj"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="mtl:techo/techo.mtl;obj:techo/techo.obj" id="techo"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:ventana/ventana.obj;mtl:ventana/ventana.mtl" id="ventana"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:colchon/colchon.obj;mtl:colchon/colchon.mtl" id="colchon"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:monigote/monigote.obj;mtl:monigote/monigote.mtl" id="monigote"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:sangre/sangre.obj;mtl:sangre/sangre.mtl" id="sangre"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:cortinas/cortinas.obj;mtl:cortinas/cortinas.mtl" id="cortinas"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:madera/madera.obj;mtl:madera/madera.mtl" id="madera" position="-0.121 0 0.022"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:cobija/cobija.obj;mtl:cobija/cobija.mtl" id="cobija"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:cuchillo/cuchillo.obj;mtl:cuchillo/cuchillo.mtl" id="cuchillo"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:llavin/llavin.obj;mtl:llavin/llavin.mtl" id="llavin"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:lampara/lampara.obj;mtl:lampara/lampara.mtl" id="lampara"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:almohadas/almohadas.obj;mtl:almohadas/almohadas.mtl" id="almohadas"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:mesasnoche/mesasnoche.obj;mtl:mesasnoche/mesasnoche.mtl" id="mesasnoche"></a-entity>
+		<a-entity scale="0.001 0.001 0.001" obj-model="obj:reloj/reloj.obj;mtl:reloj/reloj.mtl" id="reloj"></a-entity>
+
+        
+	</a-scene>
+    -->
+
+
+<!-- <a-entity position="-1.21 0.634 -2.33" camera="active:false;userHeight:1.6" wasd-controls="" rotation="1.719 -72.422 0" look-controls="" aframe-injected="" data-aframe-inspector="default-camera"></a-entity> -->
+
+
+</body></html>
+
+
