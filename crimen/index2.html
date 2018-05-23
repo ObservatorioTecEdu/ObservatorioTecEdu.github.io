@@ -29,6 +29,26 @@
    
 
    <body>
+
+   <script>
+       AFRAME.registerComponent('mover', {
+        schema: {default:''},
+        init() {
+          
+          const player = document.querySelector('#camara');
+          const sky = document.querySelector('a-sky');
+          this.el.addEventListener('click', () => {
+                var angle = player.getAttribute('rotation');
+                var x = 1 * Math.cos(angle.y * Math.PI / 180);
+                var y = 1 * Math.sin(angle.y * Math.PI / 180);
+                var pos = player.getAttribute('position');
+                pos.x -=y; 
+                pos.z -=x;
+                player.setAttribute('position', pos);
+          });
+        }
+      });
+    </script>	
    		<!-- <div id="container" class="container">
       <div class="info">
         <!-- <div class="company"><a href="http://www.cecropiasolutions.com" target="_blank">hola yo jajaja</a></div> -->
@@ -119,7 +139,13 @@
 
 
 
-          <a-entity position="1.0 1.5 0" camera="active:true" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
+         <!--  <a-entity position="1.0 1.5 0" camera="active:true" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity> -->
+
+          <a-camera position="1.0 1.5 0" rotation="-20.28270594763114 0.5729577951308279 0" active="true" id="camara" visible="true" universal-controls="movementControls:checkpoint" checkpoint-controls="mode:animate" velocity="0 0 0" hmd-controls="" gamepad-controls="" mouse-controls="" click-listener>
+    <a-cursor color="#4CC3D9" fuse="false" timeout="100"></a-cursor>
+  </a-camera>
+
+  <a-circle radius="0.5" position="1.368 0.028 0" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0"  mover="pos1" shadow event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1"></a-circle>
 
           <!-- <a-entity position="1.0 1.5 0" camera="active:true" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity> -->
 
