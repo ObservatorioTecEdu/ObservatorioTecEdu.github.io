@@ -12,14 +12,15 @@
 	    <script src="js/ctm.js"></script>
 	    <script src="js/CTMLoader.js"></script>
 
-	    <script src="js/aframe-teleport-controls.min.js"></script>
+	   	<!--< <script src="js/aframe-teleport-controls.min.js"></script>
 	    <script src="js/spheres_anim.js"></script>
 	    <script src="js/anim_1.js"></script>
 	    <script src="js/anim_2.js"></script>
 	    <script src="js/mocap.js"></script>
 	    <script src="js/envMapMaterial.js"></script>
-	    <script src="js/ctm_component.js"></script>
+	    <script src="js/ctm_component.js"></script>-->
 	    <script src="js/mobile_component.js"></script>-->
+		<script src="js/aframe-event-set-component.min.js"></script>
 
 	    
     
@@ -68,6 +69,10 @@
 
 
    	<a-scene>
+		
+		  <a-camera position="1.0 1.5 0" rotation="-20.28270594763114 0.5729577951308279 0" active="true" id="camara" visible="true" universal-controls="movementControls:checkpoint" checkpoint-controls="mode:animate" velocity="0 0 0" hmd-controls="" gamepad-controls="" mouse-controls="" click-listener>
+    <a-cursor color="#4CC3D9" fuse="false" timeout="100"></a-cursor>
+  </a-camera>
 
    		<a-entity light="type: directional; color: #FFF; intensity: 0" position="2 20 0" visible= "false" ></a-entity>
    		<a-entity light="type: ambient; color: #FFF"  visible= "false" ></a-entity>
@@ -141,26 +146,24 @@
 
          <!--  <a-entity position="1.0 1.5 0" camera="active:true" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity> -->
 
-          <a-camera position="1.0 1.5 0" rotation="-20.28270594763114 0.5729577951308279 0" active="true" id="camara" visible="true" universal-controls="movementControls:checkpoint" checkpoint-controls="mode:animate" velocity="0 0 0" hmd-controls="" gamepad-controls="" mouse-controls="" click-listener>
-    <a-cursor color="#4CC3D9" fuse="false" timeout="100"></a-cursor>
-  </a-camera>
+        
 
 
-  <a-circle radius="0.5" position="1.368 0.028 2.8999965551846074" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
+  <a-circle radius="0.5" position="1.368 0.03 2.8999965551846074" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
 
-  <a-circle radius="0.5" position="1.368 0.028 0.4564598707520475" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
+  <a-circle radius="0.5" position="1.368 0.03 0.4564598707520475" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
 
   <a-circle radius="0.5" position="0.4472751258851815 0.028 -1.3440531591441642" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
 
-  <a-circle radius="0.5" position="1.884166037040791 0.028 -1.3440531591441642" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
+  <a-circle radius="0.5" position="1.884166037040791 0.03 -1.3440531591441642" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
 
-  <a-circle radius="0.5" position="1.1751930060799054 0.028 -2.9657775659695242" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
+  <a-circle radius="0.5" position="1.1751930060799054 0.03 -2.9657775659695242" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
 
-  <a-circle radius="0.5" position="1.1751930060799054 0.028 -5.039668778747872" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
+  <a-circle radius="0.5" position="1.1751930060799054 0.03 -5.039668778747872" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
 
-  <a-circle radius="0.5" position="2.5454424530577517 0.028 -2.6357971659296378" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
+  <a-circle radius="0.5" position="2.5454424530577517 0.03 -2.6357971659296378" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
 
-  <a-circle radius="0.5" position="3.103337128401207 0.028 -4.344536193849541" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
+  <a-circle radius="0.5" position="3.103337128401207 0.03 -4.344536193849541" rotation="-90.012 0 0" material="opacity:0.1;color:#c0c0c0" mover="pos1" shadow="" event-set__enter="_event: mouseenter; opacity:0.3" event-set__leave="_event: mouseleave; opacity:0.1" geometry=""></a-circle>
 
 
 
