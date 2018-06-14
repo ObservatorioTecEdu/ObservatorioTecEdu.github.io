@@ -23,13 +23,43 @@
 	    <!--<script src="https://rawgit.com/chenzlabs/gearvr-controls/master/dist/aframe-gearvr-controls-component.min.js"></script> 
 <!ere inside a-scene... -->
    	    <script src="js/aframe-event-set-component.min.js"></script>
+		
+		<script type="text/javascript" language="javascript">
+		function wait()
+		{ 
+		    if(document.getElementById)
+		    {
+		        document.getElementById('waitpage').style.visibility='hidden';
+		    }
+		    else
+		    {
+		    if(document.layers)
+		    {
+		        document.waitpage.visibility = 'hidden';
+		    }
+		    else
+		    {
+		        document.all.waitpage.style.visibility = 'hidden';
+		    }
+		    }
+		}
+		</script>		
 
    	</head>
 
    
 
-   <body>
+   <body  onLoad="wait();">
 
+   	<div id="waitpage" style="left:0px; top:0px; position:absolute; layer-background-color:white; height:100%; width:100%;"> 
+		<table width="100%" height="100%">
+		    <tr>
+		        <td><img src="RV_imagen1.png"/></td>
+		        <td><img src="RV_imagen2.png"/></td>
+		    </tr>
+		</table>
+	</div>	   
+	   
     <script>
        AFRAME.registerComponent('mover', {
         schema: {default:''},
